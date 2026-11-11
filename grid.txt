@@ -1,0 +1,33 @@
+# =================================================================
+# COMPLEX POWER GRID NETWORK TOPOLOGY CONFIGURATION
+# =================================================================
+
+[NODES]
+# ID   Name                         Type        Demand_MW   Priority
+1      Power_Plant_Alpha            GENERATOR   0.0         10
+2      Hydro_Station_Beta           GENERATOR   0.0         10
+3      Regional_Substation_North    CONSUMER    10.0        8
+4      Central_Hospital             CONSUMER    50.0        10
+5      Tech_Data_Center             CONSUMER    45.0        7
+6      Heavy_Industrial_Zone        CONSUMER    60.0        5
+7      Metro_Water_Treatment       CONSUMER    30.0        9
+8      Commercial_Mall_District     CONSUMER    35.0        4
+9      North_Residential_Sector     CONSUMER    25.0        3
+10     South_Residential_Sector     CONSUMER    20.0        2
+
+[EDGES]
+# LineID  From  To  CurrentLoad_MW  MaxCapacity_MW
+L1        1     3   80.0            120.0
+L2        1     6   70.0            100.0
+L3        2     5   65.0            110.0
+L4        2     7   60.0            90.0
+L5        3     5   25.0            70.0
+L6        3     4   45.0            70.0
+L7        5     4   30.0            50.0
+L8        6     8   10.0            60.0
+L9        7     8   45.0            70.0
+L10       4     9   25.0            40.0
+L11       8     10  20.0            35.0
+L12       3     6   0.0             60.0
+L13       5     7   15.0            65.0
+L14       6     7   0.0             50.0
